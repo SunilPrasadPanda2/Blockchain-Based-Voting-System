@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Secure eVote System</title>
+        
+        <link rel="icon" type="image/x-icon" href="assets/favicon.jpg" />
+        
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top" style="background-color:ivory;" >
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+				<div class="sidebar-brand-icon rotate-n-15"><img class="rounded-circle img-fluid" height="80px" width="80px" src="assets/img/navbar-logo.png"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+						<li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+
+		<section class="page-section" id="votepoll">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Candidates</h2>
+                    <h3 class="section-subheading text-muted">Click on the vote button below your candidate.</h3>
+                </div>
+                <div class="row text-center" id="candidates">
+                    
+				</div>
+            </div>	
+        </section>
+		
+		<section class="page-section" id="warning">
+			<div class="text-center">
+				<h3 class="my-3"> You already voted! Go to results, after voting ends. </h3>
+			</div>	
+		</section>
+		<section class="page-section" id="votingongoing">
+			<div class="text-center">
+				<h3 class="my-3"> Voting is still ongoing. </h3>
+			</div>	
+		</section>
+		<section class="page-section" id="unlogged">
+			<div class="text-center">
+				<h3 class="my-3"> You have to login to vote. You need to register if you don't have an account yet. </h3>
+				<form>
+					<button class="btn btn-success" id="loginvtr" formaction="voter_login.html">Login </button>
+				</form>
+				<br/>
+				<form>
+					<button class="btn btn-primary" id="registervtr" formaction="voter_registration.html" >Register </button>
+				</form>
+			</div>	
+		</section>
+		
+		<section class="page-section" id="authfail">
+		<br/>
+		<br/>
+			<div class="text-center">
+				<h3 class="my-3"> Admin authorization is pending. You'll be authorizated before voting starts. </h3>
+			</div>	
+		</section>
+		
+		<section class="page-section" id="didntstart">
+		<br/>
+		<br/>
+			<div class="text-center">
+				<h3 class="my-3"> Voting hasn't started yet. </h3>
+			</div>	
+		</section>
+		
+		<section class="page-section" id="finished">
+		<br/>
+		<br/>
+			<div class="text-center">
+				<h3 class="my-3"> Voting has been completed. You can see the results now. </h3>
+			</div>	
+		</section>
+
+		<p id="accountAddress" class="text-center"></p>
+		
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/jquery-3.6.0.min.js"></script>
+        
+		<script src="js/web3.min.js"></script>
+		<script src="js/truffle-contract.js"></script>
+		<script src="js/app.js"></script>
+    </body>
+</html>
